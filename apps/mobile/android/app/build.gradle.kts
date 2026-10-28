@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
     // The Flutter Gradle plugin must be applied after the Android and
     // Kotlin plugins.
     id("dev.flutter.flutter-gradle-plugin")
@@ -12,12 +11,8 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     defaultConfig {
@@ -37,6 +32,12 @@ android {
             // Debug builds sign automatically with the debug key.
             isMinifyEnabled = false
         }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
     }
 }
 
