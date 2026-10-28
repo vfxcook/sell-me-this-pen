@@ -35,10 +35,12 @@ jobs:
 
       - name: Build debug APK
         working-directory: apps/mobile
-        run: flutter build apk --debug
+        # Split per ABI so each APK is phone-sized (a universal
+        # debug APK is ~150 MB and too large to share directly).
+        run: flutter build apk --debug --split-per-abi
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: apps/mobile/build/app/outputs/flutter-apk/app-debug.apk
+          path: apps/mobile/build/app/outputs/flutter-apk/app-*-debug.apk
