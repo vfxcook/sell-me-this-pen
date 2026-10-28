@@ -30,7 +30,9 @@ android {
             // TODO: add a release signing config (keystore properties)
             // before producing a signed release APK/AAB in Phase 6.
             // Debug builds sign automatically with the debug key.
-            isMinifyEnabled = false
+            // NOTE: do not set isMinifyEnabled here — the Flutter
+            // plugin pairs it with resource shrinking, and setting
+            // one without the other fails AGP 9 configuration.
         }
     }
 }
