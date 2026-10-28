@@ -1,7 +1,7 @@
 name: sell_me_this_pen
 description: "Sell Me This Pen — Pitch it. Test it. Improve it. AI-powered idea validation and audience simulation."
 publish_to: "none"
-version: 0.1.0+1
+version: 0.2.0+2
 
 environment:
   sdk: ">=3.4.0 <4.0.0"

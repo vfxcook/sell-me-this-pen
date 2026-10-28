@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'screens/audience_screen.dart';
 import 'screens/config_screen.dart';
 import 'screens/create_idea_screen.dart';
+import 'screens/demo_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/live_feed_screen.dart';
 import 'screens/onboarding_screen.dart';
@@ -62,6 +63,7 @@ GoRouter buildRouter() {
           ]),
         ],
       ),
+      GoRoute(path: '/demo', builder: (_, __) => const DemoScreen()),
       GoRoute(path: '/create-idea', builder: (_, __) => const CreateIdeaScreen()),
       GoRoute(path: '/audience', builder: (_, __) => const AudienceScreen()),
       GoRoute(path: '/configure', builder: (_, __) => const ConfigScreen()),

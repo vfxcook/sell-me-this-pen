@@ -32,6 +32,43 @@ class HomeScreen extends ConsumerWidget {
               Text('What shall we test today?',
                   style: Theme.of(context).textTheme.headlineMedium),
               const SizedBox(height: 16),
+              // Demo Mode hero: the fastest way to see what the app
+              // does. Runs fully on-device — no backend, no keys.
+              AppCard(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.play_circle_fill,
+                            color: AppColors.accentPink, size: 40),
+                        const SizedBox(width: 12),
+                        const Expanded(
+                          child: Text('See it in action',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 18)),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Demo mode plays a full audience test in about a '
+                      'minute — live reactions, objections, then the '
+                      'verdict. No setup, no keys, works offline. '
+                      'Sample data, clearly marked DEMO.',
+                      style: TextStyle(color: AppColors.textSecondary),
+                    ),
+                    const SizedBox(height: 12),
+                    ElevatedButton.icon(
+                      onPressed: () => context.push('/demo'),
+                      icon: const Icon(Icons.play_arrow),
+                      label: const Text('Play demo'),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
               // Credit balance: placeholder 0 until Phase 5 billing lands.
               // No price or allowance is claimed here.
               const AppCard(
