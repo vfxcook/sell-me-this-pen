@@ -87,7 +87,7 @@ class ResultsScreen extends ConsumerWidget {
                             );
                           }),
                         if (metrics is Map)
-                          ...(metrics as Map).entries.map((e) {
+                          ...metrics.entries.map((e) {
                             final v = e.value;
                             final text = v is Map
                                 ? '${e.key}: ${v['value'] ?? v} '

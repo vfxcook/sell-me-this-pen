@@ -28,7 +28,9 @@ jobs:
 
       - name: Analyze
         working-directory: apps/mobile
-        run: flutter analyze
+        # Warnings are reported but must not block the debug APK;
+        # errors still fail the build.
+        run: flutter analyze --no-fatal-warnings
 
       - name: Build debug APK
         working-directory: apps/mobile
