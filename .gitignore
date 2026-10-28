@@ -1,0 +1,25 @@
+# Flutter / Dart
+.dart_tool/
+build/
+.packages
+.pub-cache/
+.pub/
+android/.gradle/
+android/local.properties
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+.idea/
+*.iml
+.DS_Store
+
+# Python backend
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.sqlite3
+*.db
+
+# Local secrets / keys (never commit)
+.env
+*.keystore
+*.jks

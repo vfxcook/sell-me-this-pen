@@ -1,0 +1,29 @@
+name: sell_me_this_pen
+description: "Sell Me This Pen — Pitch it. Test it. Improve it. AI-powered idea validation and audience simulation."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.5.1
+  go_router: ^14.2.0
+  dio: ^5.4.0
+  # Backend URL override only. API keys are NEVER stored on-device;
+  # they are sent to the backend and stored server-side only.
+  shared_preferences: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  # NOTE: Inter font files are not bundled yet. fontFamily "Inter" in
+  # lib/theme.dart falls back to the system sans-serif until the font
+  # assets are added under assets/fonts/ and declared here.

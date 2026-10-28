@@ -1,0 +1,8 @@
+[
+  "tests/test_api.py::test_health",
+  "tests/test_api.py::test_idea_and_demo_simulation_is_flagged",
+  "tests/test_api.py::test_idempotency_no_second_run",
+  "tests/test_api.py::test_mirofish_without_keys_fails_honestly_not_fake",
+  "tests/test_api.py::test_seed_brief_does_not_invent_price",
+  "tests/test_api.py::test_settings_three_engines_and_masked_keys"
+]
